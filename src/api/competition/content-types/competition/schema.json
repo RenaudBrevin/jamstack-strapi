@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "competitions",
+  "info": {
+    "singularName": "competition",
+    "pluralName": "competitions",
+    "displayName": "Competition",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "players": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::player.player",
+      "mappedBy": "competitions"
+    },
+    "name": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    }
+  }
+}
