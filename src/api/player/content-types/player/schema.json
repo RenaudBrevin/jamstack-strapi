@@ -38,6 +38,15 @@
       "relation": "manyToMany",
       "target": "api::competition.competition",
       "inversedBy": "players"
+    },
+    "fullname": {
+      "type": "string",
+      "private": true,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "fullname"
     }
   }
 }

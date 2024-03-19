@@ -845,6 +845,8 @@ export interface ApiPlayerPlayer extends Schema.CollectionType {
       'manyToMany',
       'api::competition.competition'
     >;
+    fullname: Attribute.String & Attribute.Required & Attribute.Private;
+    slug: Attribute.UID<'api::player.player', 'fullname'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
